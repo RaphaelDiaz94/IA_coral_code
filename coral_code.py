@@ -56,7 +56,7 @@ def main():
     args = parser.parse_args()
 
     labels = read_label_file('/home/mendel/IA_coral_code/labels.txt') if "/home/mendel/IA_coral_code/labels.txt" else {}
-    interpreter = make_interpreter('/home/mendel/IA_coral_code/efficient-lite-new111.tflite')
+    interpreter = make_interpreter('/home/mendel/IA_coral_code/efficientdet-lite-new111.tflite')
     interpreter.allocate_tensors()
 
     image = Image.open('/home/mendel/IA_coral_code/image/'+name)
