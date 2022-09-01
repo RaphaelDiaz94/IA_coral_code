@@ -36,7 +36,7 @@ def draw_objects(draw, objs, labels):
 def main():
   i=0
  
-  path = '/home/mendel/CHEH_IA/im'
+  path = '/home/mendel/IA_coral_code/image'
   print(path)
   files = os.listdir(path)
   for name in files:
