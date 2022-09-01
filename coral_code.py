@@ -55,11 +55,11 @@ def main():
                         help='Score threshold for detected objects')
     args = parser.parse_args()
 
-    labels = read_label_file('/home/mendel/CHEH_IA/coco_labels.txt') if "/home/mendel/CHEH_IA/coco_labels.txt" else {}
-    interpreter = make_interpreter('/home/mendel/CHEH_IA/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite')
+    labels = read_label_file('/home/mendel/IA_coral_code/labels.txt') if "/home/mendel/IA_coral_code/labels.txt" else {}
+    interpreter = make_interpreter('/home/mendel/IA_coral_code/efficient-lite-new111.tflite')
     interpreter.allocate_tensors()
 
-    image = Image.open('/home/mendel/CHEH_IA/im/'+name)
+    image = Image.open('/home/mendel/IA_coral_code/image/'+name)
     _, scale = common.set_resized_input(
         interpreter, image.size, lambda size: image.resize(size, Image.ANTIALIAS))
 
@@ -138,7 +138,7 @@ def main():
     
     image = image.convert('RGB')
     draw_objects(ImageDraw.Draw(image), objs, labels)
-    image.save("/home/mendel/CHEH_IA/"+name)
+    image.save("/home/mendel/IA_coral_code/"+name)
     image.show()
     i=i+1
 
