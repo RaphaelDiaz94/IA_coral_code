@@ -150,7 +150,7 @@ def main():
                     aws_secret_access_key= 't1qJKmysOwm/9OvStAERVaQkoRa0dCgGqgOUArJZ',
                      )
     BUCKET_NAME='myphotobucketraph'
-    img = Image.open(image)
+    img = Image.open("/home/mendel/IA_coral_code/"+name)
     if img:
       filename = secure_filename(img.filename)
       img.save(filename)
