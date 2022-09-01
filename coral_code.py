@@ -86,7 +86,7 @@ def main():
       if obj.id == 2 :
         nb_car =  nb_car+1
       if obj.id == 3:
-        nb_motorcyle = nb_motorcycle+1
+        nb_motorcycle = nb_motorcycle+1
       if obj.id == 7:
         nb_truck = nb_truck+1
       
@@ -117,7 +117,7 @@ def main():
       cur.close()
       conn.close()
 
-    if (nb_motorcyle != 0):
+    if (nb_motorcycle != 0):
       nomelement = "Deux roues"
       conn = psycopg2.connect("postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853", sslmode='require')
       cur = conn.cursor()
