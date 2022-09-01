@@ -99,7 +99,7 @@ def main():
 
     mydate = datetime.datetime(2014, 10, 9, 11, 22, 33)
 
-    if (nb_personne != 0):
+    if (type(nb_personne) == int):
       nomelement = "Humain"
       conn = psycopg2.connect("postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853", sslmode='require')
       cur = conn.cursor()
@@ -108,7 +108,7 @@ def main():
       cur.close()
       conn.close()
 
-    if (type(nb_car) == "int"):
+    if (type(nb_car) == int):
       nomelement = "Voiture"
       conn = psycopg2.connect("postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853", sslmode='require')
       cur = conn.cursor()
@@ -118,7 +118,7 @@ def main():
       cur.close()
       conn.close()
 
-    if (type(nb_motorcycle) == "int"):
+    if (type(nb_motorcycle) == int):
       nomelement = "Deux roues"
       conn = psycopg2.connect("postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853", sslmode='require')
       cur = conn.cursor()
@@ -128,7 +128,7 @@ def main():
       cur.close()
       conn.close()
 
-    if (type(nb_truck) == "int"):
+    if (type(nb_truck) == int):
       nomelement = "Camion"
       conn = psycopg2.connect("postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853", sslmode='require')
       print("connexion OK")
