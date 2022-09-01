@@ -97,7 +97,7 @@ def main():
     print("Nombre de moto sur l'image :",nb_motorcycle)
     print("Nombre de camion sur l'image:",nb_truck)
 
-    mydate = datetime.datetime(2014, 10, 9, 11, 22, 33)
+    mydate = datetime.datetime.today()
 
     if (type(nb_personne) == int):
       nomelement = "Humain"
