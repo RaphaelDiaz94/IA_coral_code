@@ -114,67 +114,71 @@ def main():
         mydate = datetime.datetime.today()
 
         if type(nb_personne) == int:
-            nomelement = "Humain"
-            conn = psycopg2.connect(
-                "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
-                sslmode="require",
-            )
-            cur = conn.cursor()
-            cur.execute(
-                "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
-                (nomelement, nb_personne, mydate, name , score_personne),
-            )
-            conn.commit()
-            cur.close()
-            conn.close()
+            if type(nb_personne) == int or float:
+                nomelement = "Humain"
+                conn = psycopg2.connect(
+                    "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
+                    sslmode="require",
+                )
+                cur = conn.cursor()
+                cur.execute(
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
+                    (nomelement, nb_personne, mydate, name , score_personne),
+                )
+                conn.commit()
+                cur.close()
+                conn.close()
 
         if type(nb_car) == int:
-            nomelement = "Voiture"
-            conn = psycopg2.connect(
-                "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
-                sslmode="require",
-            )
-            cur = conn.cursor()
-            print("connexion OK")
-            cur.execute(
-                "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
-                (nomelement, nb_car, mydate, name, score_car),
-            )
-            conn.commit()
-            cur.close()
-            conn.close()
+            if type(nb_car) == int or float:
+                nomelement = "Voiture"
+                conn = psycopg2.connect(
+                    "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
+                    sslmode="require",
+                )
+                cur = conn.cursor()
+                print("connexion OK")
+                cur.execute(
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
+                    (nomelement, nb_car, mydate, name, score_car),
+                )
+                conn.commit()
+                cur.close()
+                conn.close()
 
         if type(nb_motorcycle) == int:
-            nomelement = "Deux roues"
-            conn = psycopg2.connect(
-                "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
-                sslmode="require",
-            )
-            cur = conn.cursor()
-            print("connexion OK")
-            cur.execute(
-                "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
-                (nomelement, nb_motorcycle, mydate, name ,score_motorcycle),
-            )
-            conn.commit()
-            cur.close()
-            conn.close()
+            if type(nb_motorcycle) == int or float:
+                nomelement = "Deux roues"
+                conn = psycopg2.connect(
+                    "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
+                    sslmode="require",
+                )
+                cur = conn.cursor()
+                print("connexion OK")
+                cur.execute(
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
+                    (nomelement, nb_motorcycle, mydate, name ,score_motorcycle),
+                )
+                conn.commit()
+                cur.close()
+                conn.close()
 
         if type(nb_truck) == int:
-            nomelement = "Camion"
-            conn = psycopg2.connect(
-                "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
-                sslmode="require",
-            )
-            print("connexion OK")
-            cur = conn.cursor()
-            cur.execute(
-                "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier,score) VALUES (%s, %s, %s,%s,%s)",
-                (nomelement, nb_truck, mydate, name,score_truck),
-            )
-            conn.commit()
-            cur.close()
-            conn.close()
+            if type(nb_truck) == int or float:
+                nomelement = "Camion"
+                conn = psycopg2.connect(
+                    "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
+                    sslmode="require",
+                )
+                print("connexion OK")
+                cur = conn.cursor()
+                cur.execute(
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier,score) VALUES (%s, %s, %s,%s,%s)",
+                    (nomelement, nb_truck, mydate, name,score_truck),
+                )
+                conn.commit()
+                cur.close()
+                conn.close()
 
         image = image.convert("RGB")
         draw_objects(ImageDraw.Draw(image), objs, labels)
