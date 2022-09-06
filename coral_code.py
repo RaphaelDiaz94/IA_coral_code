@@ -67,7 +67,7 @@ def main():
             else {}
         )
         interpreter = make_interpreter(
-            "/home/mendel/IA_coral_code/modele/efficientdet-lite3-flo.tflite"
+            "/home/mendel/IA_coral_code/efficientdet_lite3x_640_ptq_edgetpu.tflite"
         )
         interpreter.allocate_tensors()
 
