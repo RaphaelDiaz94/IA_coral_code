@@ -62,12 +62,12 @@ def main():
         args = parser.parse_args()
 
         labels = (
-            read_label_file("/home/mendel/IA_coral_code/labels.txt")
-            if "/home/mendel/IA_coral_code/labels.txt"
+            read_label_file("/home/mendel/IA_coral_code/modele/labels.txt")
+            if "/home/mendel/IA_coral_code/modele/labels.txt"
             else {}
         )
         interpreter = make_interpreter(
-            "/home/mendel/IA_coral_code/efficientdet-lite1-flo_3.tflite"
+            "/home/mendel/IA_coral_code/modele/efficientdet-lite3-flo.tflite"
         )
         interpreter.allocate_tensors()
 
