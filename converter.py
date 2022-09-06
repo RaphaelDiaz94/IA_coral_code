@@ -2,10 +2,10 @@ import cv2
 import os
 import numpy as np
 
-input_img_folder = 'C:\\Users\\diazy\\Desktop\\Reentrainement\\VisDrone2019-DET-train\\images'
-input_ann_folder = 'C:\\Users\\diazy\\Desktop\\Reentrainement\\VisDrone2019-DET-train\\annotations'
-output_ann_folder = 'C:\\Users\\diazy\\Desktop\\Reentrainement\\VisDrone2019-DET-train\\annotations_new'
-output_img_folder = 'C:\\Users\\diazy\\Desktop\\Reentrainement\\VisDrone2019-DET-train\\images_new'
+input_img_folder = '/home/raph/Bureau/VisDrone2019-DET-train/Image_test_resize'
+input_ann_folder = '/home/raph/Bureau/VisDrone2019-DET-train/annotations'
+output_ann_folder = '/home/raph/Bureau/VisDrone2019-DET-train/annotations_new'
+output_img_folder = '/home/raph/Bureau/VisDrone2019-DET-train/images_new'
 
 os.makedirs(output_img_folder, exist_ok=True)
 os.makedirs(output_ann_folder, exist_ok=True)
