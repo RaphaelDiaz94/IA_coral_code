@@ -97,24 +97,38 @@ def main():
             print("  id:    ", obj.id)
             if obj.id == 0:
                 nb_personne = nb_personne + 1
-                score_personne = obj.score
+                if nb_personne != 0 :
+                    score_personne = obj.score
+                else : 
+                    score_personne = 0
+
 
             if obj.id == 2:
                 nb_car = nb_car + 1
-                score_car = obj.score
+                if nb_car != 0 :
+                    score_car = obj.score
+                else : 
+                    score_car = 0
 
             if obj.id == 3:
                 nb_motorcycle = nb_motorcycle + 1
-                score_motorcycle= obj.score
+                if nb_motorcycle != 0 :
+                    score_motorcycle = obj.score
+                else : 
+                    score_motorcycle = 0
 
             if obj.id == 7:
                 nb_truck = nb_truck + 1
-                score_truck = obj.score
+                if nb_truck != 0 :
+                    score_truck = obj.score
+                else : 
+                    score_truck = 0
+        
+
 
         mydate = datetime.datetime.today()
 
         if type(nb_personne) == int:
-            if type(nb_personne) == int or float:
                 nomelement = "Humain"
                 conn = psycopg2.connect(
                     "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
@@ -130,7 +144,6 @@ def main():
                 conn.close()
 
         if type(nb_car) == int:
-            if type(nb_car) == int or float:
                 nomelement = "Voiture"
                 conn = psycopg2.connect(
                     "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
@@ -147,7 +160,6 @@ def main():
                 conn.close()
 
         if type(nb_motorcycle) == int:
-            if type(nb_motorcycle) == int or float:
                 nomelement = "Deux roues"
                 conn = psycopg2.connect(
                     "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
@@ -164,7 +176,6 @@ def main():
                 conn.close()
 
         if type(nb_truck) == int:
-            if type(nb_truck) == int or float:
                 nomelement = "Camion"
                 conn = psycopg2.connect(
                     "postgres://owshwcafnfsgsx:2b4cf5ade3fb7b2f25e3f1b66cd29d5a7e420fdd1d51b4c01df4b6086f1db630@ec2-18-214-35-70.compute-1.amazonaws.com:5432/d5arg29ce13853",
