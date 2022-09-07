@@ -99,30 +99,26 @@ def main():
                 nb_personne = nb_personne + 1
                 if nb_personne != 0 :
                     score_personne = obj.score
-                else : 
-                    score_personne = 0
+               
 
 
             if obj.id == 2:
                 nb_car = nb_car + 1
                 if nb_car != 0 :
                     score_car = obj.score
-                else : 
-                    score_car = 0
+               
 
             if obj.id == 3:
                 nb_motorcycle = nb_motorcycle + 1
                 if nb_motorcycle != 0 :
                     score_motorcycle = obj.score
-                else : 
-                    score_motorcycle = 0
+              
 
             if obj.id == 7:
                 nb_truck = nb_truck + 1
                 if nb_truck != 0 :
                     score_truck = obj.score
-                else : 
-                    score_truck = 0
+               
         
 
 
@@ -136,8 +132,8 @@ def main():
                 )
                 cur = conn.cursor()
                 cur.execute(
-                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
-                    (nomelement, nb_personne, mydate, name , score_personne),
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier) VALUES (%s, %s, %s,%s)",
+                    (nomelement, nb_personne, mydate, name),
                 )
                 conn.commit()
                 cur.close()
@@ -152,8 +148,8 @@ def main():
                 cur = conn.cursor()
                 print("connexion OK")
                 cur.execute(
-                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
-                    (nomelement, nb_car, mydate, name, score_car),
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier) VALUES (%s, %s, %s,%s)",
+                    (nomelement, nb_car, mydate, name),
                 )
                 conn.commit()
                 cur.close()
@@ -168,8 +164,8 @@ def main():
                 cur = conn.cursor()
                 print("connexion OK")
                 cur.execute(
-                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier, score) VALUES (%s, %s, %s,%s,%s)",
-                    (nomelement, nb_motorcycle, mydate, name ,score_motorcycle),
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier) VALUES (%s, %s, %s,%s)",
+                    (nomelement, nb_motorcycle, mydate, name),
                 )
                 conn.commit()
                 cur.close()
@@ -184,8 +180,8 @@ def main():
                 print("connexion OK")
                 cur = conn.cursor()
                 cur.execute(
-                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier,score) VALUES (%s, %s, %s,%s,%s)",
-                    (nomelement, nb_truck, mydate, name,score_truck),
+                    "INSERT INTO stats (nom_element, nb_element, precision , nom_fichier) VALUES (%s, %s, %s,%s)",
+                    (nomelement, nb_truck, mydate, name),
                 )
                 conn.commit()
                 cur.close()
