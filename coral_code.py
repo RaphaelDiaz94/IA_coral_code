@@ -97,27 +97,21 @@ def main():
             print("  id:    ", obj.id)
             if obj.id == 0:
                 nb_personne = nb_personne + 1
-                if nb_personne != 0 :
-                    score_personne = obj.score
-               
+              
 
 
             if obj.id == 2:
                 nb_car = nb_car + 1
-                if nb_car != 0 :
-                    score_car = obj.score
+              
                
 
             if obj.id == 3:
                 nb_motorcycle = nb_motorcycle + 1
-                if nb_motorcycle != 0 :
-                    score_motorcycle = obj.score
+                
               
 
             if obj.id == 7:
                 nb_truck = nb_truck + 1
-                if nb_truck != 0 :
-                    score_truck = obj.score
                
         
 
